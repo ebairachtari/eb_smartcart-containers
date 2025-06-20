@@ -1,7 +1,7 @@
 from pymongo import MongoClient
 
 # Σύνδεση με MongoDB
-client = MongoClient("mongodb://localhost:27017/")
+client = MongoClient("mongodb://mongo:27017")
 db = client["smartcart_db"]
 
 # Όλα τα collections
