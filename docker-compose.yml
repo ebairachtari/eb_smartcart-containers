@@ -5,6 +5,9 @@ services:
     image: mongo:4.4
     ports:
       - "27017:27017"
+    volumes:
+      - ./mongo-init:/docker-entrypoint-initdb.d/
+    restart: always
     container_name: smartcart_mongo
 
   backend:
