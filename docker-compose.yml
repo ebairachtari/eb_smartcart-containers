@@ -13,12 +13,12 @@ services:
       - FLASK_ENV=development
       - MONGO_URI=mongodb://mongo:27017/smartcart_db
 
-  mongo:
-    image: mongo:4.4
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo_data:/data/db
+mongo:
+  image: mongo:4.4
+  ports:
+    - "27017:27017"
+  volumes:
+    - ./mongo_init:/docker-entrypoint-initdb.d
 
   ml_service:
     build:
